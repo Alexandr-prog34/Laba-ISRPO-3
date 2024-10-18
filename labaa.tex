@@ -1,0 +1,224 @@
+\documentclass[a4paper, 14pt]{extarticle}
+
+% Подключение пакетов
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Times New Roman}
+
+% Настройка стиля документа
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+% Дополнительные пакеты
+\usepackage{amsmath} % для математических формул
+\usepackage{listings} % для отображения кода
+\usepackage{xcolor} % для цветной подсветки кода
+\usepackage{geometry} % для изменения полей документа
+\usepackage[utf8]{inputenc} % для поддержки кириллицы
+\usepackage[russian]{babel} % для русского языка
+\usepackage{graphicx} % для вставки изображений
+\usepackage{hyperref} % для создания активных ссылок
+
+% Настройка полей
+\geometry{top=17mm, bottom=20mm, left=20mm, right=20mm}
+
+% Настройка отображения кода
+\lstset{
+	language=Python,
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{blue}\bfseries,
+	stringstyle=\color{red},
+	commentstyle=\color{gray},
+	showstringspaces=false,
+	numbers=left,
+	numberstyle=\tiny,
+	stepnumber=1,
+	numbersep=5pt,
+	tabsize=4,
+	breaklines=true,
+	breakatwhitespace=false,
+	showtabs=false,
+	showspaces=false,
+	showlines=true,
+	frame=single,
+	captionpos=b
+}
+
+\begin{document}
+	
+	% Титульный лист
+	\begin{titlepage}
+		\centering
+		\large
+		\textbf{Министерство науки и высшего образования Российской Федерации}\\
+		\vspace{0.7cm}
+		\textbf{Федеральное государственное автономное образовательное учреждение высшего образования}\\
+		\textbf{«Национальный исследовательский университет ИТМО»}\\
+		\vspace{1.5cm}
+		\includegraphics[width=0.4\textwidth]{itmologo.jpg}\\
+		\vspace{2cm}
+		Факультет информационных технологий и программирования\\
+		\vspace{3cm}
+		{\normalsize Лабораторная работа №3}\\
+		\vspace{0.5cm}
+		{\LARGE \textbf{Работа с Latex}}\\
+		\vfill
+		\hfill
+		\begin{flushright}
+			\small
+			\textbf{Выполнил студент группы № M3112} \\ 
+			Плотников Александр Вадимович \\[1cm]
+			
+			\begin{minipage}{0.4\textwidth}
+				\flushright
+				\textbf{Проверил:} \\
+				Хасан Карим Асадович / Жуков Артём Сергеевич\\
+			\end{minipage}
+		\end{flushright}
+		
+		\vfill
+		Санкт-Петербург\\
+		2024
+	\end{titlepage}
+	
+	\newpage
+	
+	% Оглавление
+	\tableofcontents
+	
+	\newpage
+	
+	\section{Задачи программ из репозитория}
+	Программы из данного репозитория решают задачи вычисления площади и периметра различных геометрических фигур, таких как треугольники, квадраты и круги. Основная цель — предоставить пользователю возможность вычислять эти параметры с помощью минимального ввода данных.
+	
+	\section{Описание файлов программ из репозитория}
+	Для каждого файла приведен исходный код программы, текстовое описание логики программы и визуализация используемых формул.
+	
+	\subsection{Файл \texttt{triangle.py}}
+	\texttt{triangle.py} предоставляет функции для работы с треугольниками: вычисление площади и периметра.
+	
+	- Площадь треугольника:
+	\[
+	p = \frac{a + b + c}{2}
+	\]
+	где \( a \), \( b \), \( c \) — длины сторон треугольника.
+	
+	- Периметр треугольника:
+	\[
+	P = a + b + c
+	\]
+	
+	\begin{lstlisting}[language=Python]
+		def area(a, b, c):
+			return (a + b + c) / 2
+		
+		def perimeter(a, b, c):
+			return a + b + c
+	\end{lstlisting}
+	
+	\subsection{Файл \texttt{square.py}}
+	\texttt{square.py} содержит функции для вычисления площади и периметра квадрата.
+	
+	- Площадь квадрата:
+	\[ 
+	S = a^2 
+	\]
+	где \( a \) — длина стороны квадрата.
+	
+	- Периметр квадрата:
+	\[ 
+	P = 4a 
+	\]
+	
+	\begin{lstlisting}[language=Python]
+		def area(a):
+			return a * a
+		
+		def perimeter(a):
+			return 4 * a
+	\end{lstlisting}
+	
+	\subsection{Файл \texttt{circle.py}}
+	В файле \texttt{circle.py} представлены функции для работы с кругами: вычисление площади и периметра (длины окружности).
+	
+	- Площадь круга:
+	\[ 
+	S = \pi r^2 
+	\]
+	где \( r \) — радиус круга.
+	
+	- Периметр (окружность) круга:
+	\[ 
+	P = 2 \pi r 
+	\]
+	
+	\begin{lstlisting}[language=Python]
+		import math
+		
+		def area(r):
+			return math.pi * r * r
+		
+		def perimeter(r):
+			return 2 * math.pi * r
+	\end{lstlisting}
+	
+	\newpage
+	\subsection{Файл \texttt{calculate.py}}
+	\texttt{calculate.py} — это основная программа, которая взаимодействует с пользователем и позволяет вычислять площадь и периметр выбранной фигуры.
+	\begin{lstlisting}[language=Python]
+		import circle
+		import square
+		
+		figs = ['circle', 'square']
+		funcs = ['perimeter', 'area']
+		
+		def calc(fig, func, size):
+			result = eval(f'{fig}.{func}(*{size})')
+			print(f'{func} of {fig} is {result}')
+		
+		if __name__ == "__main__": 
+			func = ''
+			fig = ''
+			size = list()
+			
+			while fig not in figs:
+			fig = input(f"Enter figure name, available are {figs}:\n")
+			
+			while func not in funcs:
+			func = input(f"Enter function name, available are {funcs}:\n")
+			
+			while len(size) != 1:
+			size = list(map(int, input("Input figure sizes separated by space, 1 for circle and square\n").split(' ')))
+			
+			calc(fig, func, size)
+	\end{lstlisting}
+	
+	\newpage
+	\subsection{Формулы используемых фигур}
+	В данной секции представлены основные формулы для вычисления площади и периметра фигур, использованных в программе.
+	
+	\begin{itemize}
+		\item Треугольник:
+		\[
+		S = \sqrt{p(p - a)(p - b)(p - c)}, \quad P = a + b + c
+		\]
+		где \(p = \frac{a + b + c}{2}\) — полупериметр треугольника.
+		
+		\item Квадрат:
+		\[
+		S = a^2, \quad P = 4a
+		\]
+		
+		\item Круг:
+		\[
+		S = \pi r^2, \quad P = 2\pi r
+		\]
+	\end{itemize}
+	
+	\newpage
+	\section{Ссылка}
+	Ссылка на код Latex:
+	\href{https://github.com/username/repository}{ссылка на репозиторий работы}
+	
+\end{document}
