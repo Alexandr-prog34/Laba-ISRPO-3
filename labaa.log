@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (MiKTeX 24.4) (preloaded format=xelatex 2024.10.10)  18 OCT 2024 17:14
+This is XeTeX, Version 3.141592653-2.6-0.999996 (MiKTeX 24.4) (preloaded format=xelatex 2024.10.10)  18 OCT 2024 17:21
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -605,19 +605,22 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
 [4]
 
 [5]
-Runaway argument?
-! Paragraph ended before \href@split was complete.
-<to be read again> 
-                   \par 
-l.223 	
-        
+
+[6] (labaa.aux)
+ ***********
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-08-30>
+ ***********
+Package rerunfilecheck Info: File `labaa.out' has not changed.
+(rerunfilecheck)             Checksum: 7D80D7C268954BD33D8D7EDFFA136DD3;1587.
+ ) 
 Here is how much of TeX's memory you used:
- 14771 strings out of 409028
- 279183 string characters out of 5756922
+ 14775 strings out of 409028
+ 279261 string characters out of 5756922
  1073476 words of memory out of 5000000
- 37282 multiletter control sequences out of 15000+600000
+ 37284 multiletter control sequences out of 15000+600000
  563443 words of font info for 84 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  79i,6n,93p,388b,1198s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on labaa.pdf (6 pages).
+Output written on labaa.pdf (7 pages).

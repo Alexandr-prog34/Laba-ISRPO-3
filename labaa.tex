@@ -68,7 +68,7 @@
 		\begin{flushright}
 			\small
 			\textbf{Выполнил студент группы № M3112} \\ 
-			Плотников Александр Вадимович \\[1cm]
+			Фамилия Имя Отчество \\[1cm]
 			
 			\begin{minipage}{0.4\textwidth}
 				\flushright
@@ -111,10 +111,10 @@
 	
 	\begin{lstlisting}[language=Python]
 		def area(a, b, c):
-			return (a + b + c) / 2
+		return (a + b + c) / 2
 		
 		def perimeter(a, b, c):
-			return a + b + c
+		return a + b + c
 	\end{lstlisting}
 	
 	\subsection{Файл \texttt{square.py}}
@@ -133,10 +133,10 @@
 	
 	\begin{lstlisting}[language=Python]
 		def area(a):
-			return a * a
+		return a * a
 		
 		def perimeter(a):
-			return 4 * a
+		return 4 * a
 	\end{lstlisting}
 	
 	\subsection{Файл \texttt{circle.py}}
@@ -157,10 +157,10 @@
 		import math
 		
 		def area(r):
-			return math.pi * r * r
+		return math.pi * r * r
 		
 		def perimeter(r):
-			return 2 * math.pi * r
+		return 2 * math.pi * r
 	\end{lstlisting}
 	
 	\newpage
@@ -174,24 +174,24 @@
 		funcs = ['perimeter', 'area']
 		
 		def calc(fig, func, size):
-			result = eval(f'{fig}.{func}(*{size})')
-			print(f'{func} of {fig} is {result}')
+		result = eval(f'{fig}.{func}(*{size})')
+		print(f'{func} of {fig} is {result}')
 		
 		if __name__ == "__main__": 
-			func = ''
-			fig = ''
-			size = list()
-			
-			while fig not in figs:
-			fig = input(f"Enter figure name, available are {figs}:\n")
-			
-			while func not in funcs:
-			func = input(f"Enter function name, available are {funcs}:\n")
-			
-			while len(size) != 1:
-			size = list(map(int, input("Input figure sizes separated by space, 1 for circle and square\n").split(' ')))
-			
-			calc(fig, func, size)
+		func = ''
+		fig = ''
+		size = list()
+		
+		while fig not in figs:
+		fig = input(f"Enter figure name, available are {figs}:\n")
+		
+		while func not in funcs:
+		func = input(f"Enter function name, available are {funcs}:\n")
+		
+		while len(size) != 1:
+		size = list(map(int, input("Input figure sizes separated by space, 1 for circle and square\n").split(' ')))
+		
+		calc(fig, func, size)
 	\end{lstlisting}
 	
 	\newpage
@@ -199,18 +199,18 @@
 	В данной секции представлены основные формулы для вычисления площади и периметра фигур, использованных в программе.
 	
 	\begin{itemize}
-		\item Треугольник:
+		\item **Треугольник**:
 		\[
 		S = \sqrt{p(p - a)(p - b)(p - c)}, \quad P = a + b + c
 		\]
 		где \(p = \frac{a + b + c}{2}\) — полупериметр треугольника.
 		
-		\item Квадрат:
+		\item **Квадрат**:
 		\[
 		S = a^2, \quad P = 4a
 		\]
 		
-		\item Круг:
+		\item **Круг**:
 		\[
 		S = \pi r^2, \quad P = 2\pi r
 		\]
@@ -218,7 +218,7 @@
 	
 	\newpage
 	\section{Ссылка}
-	Ссылка на код Latex:
-	\href{https://github.com/Alexandr-prog34/Laba-ISRPO-3}
+	Ссылка на работу:
+	\href{https://github.com/Alexandr-prog34/Laba-ISRPO-3}{ссылка на репозиторий работы}
 	
 \end{document}
